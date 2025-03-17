@@ -35,4 +35,4 @@ print("xgboost has an accuracy of: %s\n"
 	% str(accuracy_score(yt, prediction)*100))
 
 X_test = data_test.drop('meal', axis=1) 
-pred = (modelFit.predict(X_test)).astype(int)
+pred = (modelFit.predict(X_test)).tolist()
